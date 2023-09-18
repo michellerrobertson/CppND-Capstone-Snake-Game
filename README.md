@@ -44,3 +44,17 @@ This work is licensed under a
 [cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
 [cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+
+
+## CAPSTONE PROJECT
+for this project, I took the starter code given for the Snake Game, and added a feature where there are not obstacles placed randomly around the game. With each additional point, a new obstacle is placed. If the snake runs into an obstacle, the snake dies and the game is over.
+
+This project accepts user inputs from the keyboard and adjusts game behavior in controller.cpp in Controller::HandleInput() on line 12. 
+
+This project uses Object Oriented Programming techniques. Additions made to the starter code include the function PlaceObstacles() within the Game class in game.cpp line 70 and the function Kill() in the Snake class in snake.cpp line 69.
+
+The Classes use appropriate access specifiers for class members. Additions to the starter code include the vector of SDL Points, obstacles, specified as a private member in game.h line 24, with a getter specified as a public function in game.h line 17.
+
+All the classes abstract implementation details of their interface. Functionality is documented through comments and variable names throughout the code. See comments in Game::PlaceObstacles() in game.cpp line 70. See comments near Snake::Kill() in line 69, and where that function is called in game.cpp line 112.
+
+Classes encapsulate behavior, and all the appropriate variables and functions are grouped into classes. For example, "alive" is a private member of the snake class. The Kill() function is a public member of the snake class that was created to alter the variable "alive". This function is then called within the game class, which holds the private member "obstacles".
